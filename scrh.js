@@ -33,6 +33,6 @@ if (!username) {
     // Redirect to the Scratch user page
     window.location.replace(`https://scratch.mit.edu/users/${username}`);
   } else {
-    window.location.replace(`https://hackercat-mod.github.io/scrh/oops_im_not_real_sorry?username=${username}`);
+    window.location.replace(`https://scrhlink.github.io/oops_im_not_real_sorry?username=${username}`);
   }
 }
