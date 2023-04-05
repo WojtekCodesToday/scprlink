@@ -33,6 +33,6 @@ if (! id) {
     // Redirect to the Scratch user page
     window.location.replace(`https://scratch.mit.edu/projects/${id}`);
   } else {
-    window.location.replace(`https://scrhlink.github.io/404?id=${id}`);
+    window.location.replace(`https://scrhlink.github.io/err?id=${id}`);
   }
 }
