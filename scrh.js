@@ -34,7 +34,7 @@ function waitForElement(selector) {
   });
 }
 
-waitForElement("#my-element").then(element => {
+waitForElement("#nojs").then(element => {
   document.getElementById("nojs").style.display = "none";
 });
 
