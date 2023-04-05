@@ -19,6 +19,18 @@
       padding-right: 50px;
     }
     </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <b><span id="accountnav">This user</span> no longer exists.</b>
+    </div>
+    <div id="description">
+    <p>If you followed a link to <span id="account">a user</span>'s profile, the page you requested no longer exists.</p>
+    <h2>Why?</h2>
+    <p>When you open a shortened Scratch profile URL, <code>scrh</code> checks if the user exists. If so, it takes you to Scratch, or else it redirects you here.</p>
+    <p>This screen can appear for a number of reasons, such as when the linked user has been banned by the Scratch Team.</p>
+    <p>Hope this helps you!</p>
+    </div>
     <script>
       const params = new URLSearchParams(document.location.search);
       const username = params.get("username");
@@ -33,17 +45,5 @@
       document.getElementById("account").textContent=`${username}`;
       document.getElementById("accountnav").textContent=`${username}`;
     </script>
-  </head>
-  <body>
-    <div id="navbar">
-      <b><span id="accountnav">This user</span> no longer exists.</b>
-    </div>
-    <div id="description">
-    <p>If you followed a link to <span id="account">a user</span>'s profile, the page you requested no longer exists.</p>
-    <h2>Why?</h2>
-    <p>When you open a shortened Scratch profile URL, <code>scrh</code> checks if the user exists. If so, it takes you to Scratch, or else it redirects you here.</p>
-    <p>This screen can appear for a number of reasons, such as when the linked user has been banned by the Scratch Team.</p>
-    <p>Hope this helps you!</p>
-    </div>
   </body>
 </html>
