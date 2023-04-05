@@ -33,7 +33,6 @@ if (!username) {
     // Redirect to the Scratch user page
     window.location.replace(`https://scratch.mit.edu/users/${username}`);
   } else {
-    alert("This account doesn't exist. It may have been deleted by the Scratch Team.");
-    window.history.back();
+    window.location.replace(`https://hackercat-mod.github.io/srch/oops_im_not_real_sorry?username=${username}`);
   }
 }
