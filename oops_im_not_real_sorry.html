@@ -11,11 +11,20 @@
     <script>
       const params = new URLSearchParams(document.location.search);
       const username = params.get("username");
+      function sleep(milliseconds) {
+        const date = Date.now();
+        let currentDate = null;
+        do {
+          currentDate = Date.now();
+        } while (currentDate - date < milliseconds);
+      }
+      sleep(50);
+      document.getElementById("account").textContent=`${username}`;
     </script>
   </head>
   <body>
     <h1>Error</h1>
-    <p>If you followed a link to <span id="account"></span>'s profile, the page you requested no longer exists.</p>
+    <p>If you followed a link to <span id="account">a user</span>'s profile, the page you requested no longer exists.</p>
     <h2>Why?</h2>
     <p>When you open a shortened Scratch profile URL, <code>scrh</code> checks if the user exists. If so, it takes you to Scratch, or else it redirects you here.</p>
     <p>This screen can appear for a number of reasons, such as when the linked user has been banned by the Scratch Team.</p>
