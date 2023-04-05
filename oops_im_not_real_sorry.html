@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>This account does not exist</title>
+    <style>
+    body {
+      padding: 15px;
+      font-family: system-ui;
+    }
+    </style>
+    <script>
+      const params = new URLSearchParams(document.location.search);
+      const username = params.get("username");
+    </script>
+  </head>
+  <body>
+    <h1>Error</h1>
+    <p>If you followed a link to <span id="account"></span>'s profile, the page you requested no longer exists.</p>
+    <h2>Why?</h2>
+    <p>When you open a shortened Scratch profile URL, <code>scrh</code> checks if the user exists. If not, it redirects you here.</p>
+    <p>This screen can appear for a number of reasons, such as when the linked user has been banned by the Scratch Team.</p>
+    <p>There are other popular Scratchers you may be looking for. Examples include <a href="https://hackercat-mod.github.io/scrh/griffpatch">Griffpatch</a>, <a href="https://hackercat-mod.github.io/scrh/Will_Wam">Will Wam</a></p>, and <a href="https://hackercat-mod.github.io/scrh/ScratchCat">the Scratch Team</a>.
+  </body>
+</html>
