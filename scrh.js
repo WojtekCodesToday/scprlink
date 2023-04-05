@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 // Get the username from the current URL using a regular expression
-let username = window.location.pathname.match(/\/([^\/]+)$/)[1];
+let id = window.location.pathname.match(/\/([^\/]+)$/)[1];
 
 function urlExists(url) {
   // Create a new XMLHttpRequest object
@@ -24,15 +24,15 @@ function urlExists(url) {
 }
 
 // If the username is empty, show an alert and go back
-if (!username) {
-  alert("Couldn't extract this account's username.");
+if (! id) {
+  alert("Couldn't extract this ID.");
   window.history.back();
 } else {
   // Validate if the account actually exists
-  if (urlExists(`https://scratch.mit.edu/users/${username}`)) {
+  if (urlExists(`https://scratch.mit.edu/projects/${id}`)) {
     // Redirect to the Scratch user page
-    window.location.replace(`https://scratch.mit.edu/users/${username}`);
+    window.location.replace(`https://scratch.mit.edu/projects/${id}`);
   } else {
-    window.location.replace(`https://scrhlink.github.io/oops_im_not_real_sorry?username=${username}`);
+    window.location.replace(`https://scrhlink.github.io/404?id=${id}`);
   }
 }
