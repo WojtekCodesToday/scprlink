@@ -28,11 +28,6 @@ if (! id) {
   alert("Couldn't extract this ID.");
   window.history.back();
 } else {
-  // Validate if the account actually exists
-  if (urlExists(`https://scratch.mit.edu/projects/${id}`)) {
-    // Redirect to the Scratch user page
-    window.location.replace(`https://scratch.mit.edu/projects/${id}`);
-  } else {
-    window.location.replace(`https://scrhlink.github.io/err?id=${id}`);
+    window.location.href = `https://scratch.mit.edu/projects/${id}`;
   }
 }
